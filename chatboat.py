@@ -1,19 +1,22 @@
+
 import streamlit as st
 from langchain_groq import ChatGroq
-from dotenv import load_dotenv
-load_dotenv()
-llm = ChatGroq(
-    model="openai/gpt-oss-20b",
-    temperature=0.0,
-)
-# streamlit page setup
 
 st.set_page_config(
     page_title="Chatbot",
     page_icon="🤖",
     layout="centered"
 )
+
 st.title("💬 Generative AI Chatbot")
+
+api_key = st.secrets["GROQ_API_KEY"]
+
+llm = ChatGroq(
+    api_key=api_key,
+    model="openai/gpt-oss-20b",
+    temperature=0.0
+)
 # initiate chat history
 
 if 'chat_history' not in st.session_state:
