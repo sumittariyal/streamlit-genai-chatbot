@@ -1,8 +1,10 @@
 import streamlit as st
-from langchain_ollama import ChatOllama
-llm = ChatOllama(
-    model="llama3.2",
-    temperature=0.0
+from langchain_groq import ChatGroq
+from dotenv import load_dotenv
+load_dotenv()
+llm = ChatGroq(
+    model="openai/gpt-oss-20b",
+    temperature=0.0,
 )
 # streamlit page setup
 
