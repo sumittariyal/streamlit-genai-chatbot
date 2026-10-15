@@ -2,7 +2,7 @@
 
 A Generative AI chatbot built using Streamlit, LangChain, and Groq API. It provides an interactive chat interface where users can ask questions and receive AI-generated responses.
 
-🚀 Live Demo
+🚀 Live Demo [https://app-genai-chatbot-rwpioxxqqrsztcdczvbqky.streamlit.app/]
 
 Try the Generative AI Chatbot
 
